@@ -9,5 +9,16 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
+    redirect to '/articles'
+  end
+
+  get '/articles' do
+    @articles = Article.all 
+    erb :index
+  end
+
+  get '/articles/:id' do 
+    @article = Article.find(params[:id])
+    erb :show
   end
 end

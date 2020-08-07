@@ -1,26 +1,10 @@
-<%# # show all article
-<!doctype html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Posts - Blog</title>
-</head>
-<body >
-    <h1>Posts</h1>
-     %>
-    <ul> 
-
-    <% @article.each do |article| %>
-        <li>
-            <a href="/article/<%=article.id%>">
-                <%= article.title %>
-            </a>
-        </li>
-    <% end %>
-    </ul>
-<%# 
-</body>
-
-
-</html> %>
+  
+<ul>
+<% @articles.each do |article| %>
+  <li>
+    <a href="/articles/<%= article.id %>">
+      <%= article.title %> 
+    </a>
+  </li>
+<% end %>
+</ul>

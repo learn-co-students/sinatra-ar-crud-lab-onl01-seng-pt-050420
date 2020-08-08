@@ -1,5 +1,9 @@
-<% @articles.each_with_index do |article, index| %>
-<h1><%= article[:name] %></h1>
-<h4><%= article[:content] %></h4>
-<br>
+<ul>
+<% @articles.each do |article| %>
+  <li>
+    <a href="/articles/<%= article.id %>">
+      <%= article.title %> 
+    </a>
+  </li>
 <% end %>
+</ul>

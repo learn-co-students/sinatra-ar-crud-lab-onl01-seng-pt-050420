@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+</head>
+<body>
+<h1>List of Articles</h1>
+    <a href="/articles/new">Create New Article</a>
+   <% @articles.each.with_index do |a, i|%>
+    <ul>
+        <b><%="#{i+1}"%>. <%= a.title%></b>
+        <br>
+        <p><%= a.content%></p>
+    </ul>
+    <% end %> 
+</body>
+</html>
+
+
+

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<title>"ARTICLES"<%=params[:id]%></title>
+<body>
+<h1>Article </h1>
+<p> <%= @article.title %>
+<p> <%= @article.content %>
+<form action="/articles/<%= @article.id %>" method="post">
+<input id="hidden" type="hidden" name="_method" value="delete">
+<p><input type="submit" value="delete" id="submit"></p>
+</form>
+</body>
+</html>
